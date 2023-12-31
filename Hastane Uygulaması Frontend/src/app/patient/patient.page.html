@@ -1,0 +1,51 @@
+<ion-content>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <button
+        style="margin-left: 0.25em; display: flex; background-color: rgb(56, 128, 255); padding: 0.25rem; align-items: center; font-size: 20px; border-radius: 1em 0 0 1em; color: white;"
+        (click)="routeBack()">
+        <ion-icon name="caret-back-outline"></ion-icon>
+        Geri
+      </button>
+      <ion-title>Randevu Al</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div
+    style="width: 100%; display: flex; align-items: end; height: calc(100% - 44px); background-image: url(assets/images/clock.jpg); background-repeat: no-repeat; background-size: cover; flex-direction: column; justify-content: center;">
+    <ion-list style="margin-left: auto; margin-right: auto; opacity: 0.75;">
+      <ion-item style="margin: 1.5rem 0;">
+        <ion-label position="floating" style="color: #fff;">İsim</ion-label>
+        <ion-input [(ngModel)]="patientName" placeholder="İsim" style="color: #fff;"></ion-input>
+      </ion-item>
+
+      <ion-item style="margin: 1.5rem 0;">
+        <ion-label position="floating" style="color: #fff;">Soyisim</ion-label>
+        <ion-input [(ngModel)]="patientLastName" placeholder="Soyisim" style="color: #fff;"></ion-input>
+      </ion-item>
+
+      <ion-item style="margin: 1.5rem 0;">
+        <ion-label position="floating" style="color: #fff;">Doktor İsim</ion-label>
+        <ion-input [(ngModel)]="doctorFirstname" placeholder="İsim" style="color: #fff;"></ion-input>
+      </ion-item>
+
+      <ion-item style="margin: 1.5rem 0;">
+        <ion-label position="floating" style="color: #fff;">Doktor Soyisim</ion-label>
+        <ion-input [(ngModel)]="doctorLastname" placeholder="Soyisim" style="color: #fff;"></ion-input>
+      </ion-item>
+
+      <ion-item style="margin: 1.5rem 0;">
+        <ion-label position="floating" style="color: #fff;">Şikayetiniz</ion-label>
+        <ion-textarea [(ngModel)]="symptoms" placeholder="Şikayetinizi kısaca anlatınız" style="color: #fff;"></ion-textarea>
+      </ion-item>
+
+      <ion-item style="margin: 1.5rem 0;">
+        <ion-label style="color: #fff;">Tarih ve Saat</ion-label>
+        <ion-datetime display-format="MM/DD/YYYY HH:mm" [(ngModel)]="selectedDate" style="color: #fff;"></ion-datetime>
+      </ion-item>
+
+    </ion-list>
+    <ion-footer style="display: flex; justify-content: end; padding: 2rem;">
+      <ion-button (click)="submitForm()" color="primary">Randevu oluştur</ion-button>
+    </ion-footer>
+  </div>
+</ion-content>
