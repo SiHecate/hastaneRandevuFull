@@ -27,7 +27,7 @@ export class AppointmentsPage {
 
   constructor(private nav: NavController, private httpService: HttpClient, private router: Router) {
     this.httpService.get<any>(this.baseUrl).subscribe({
-      next: (res) => this.doctors=res,
+      next: (res) => this.doctors=res, 
       error: (err) => console.log(err)
     })
     setTimeout(() => {
